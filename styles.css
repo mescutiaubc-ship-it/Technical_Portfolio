@@ -313,3 +313,24 @@ body::before{
   background: rgba(255,255,255,0.7);
   border-top: 1px solid var(--border);
 }
+/* ===== Readability Fix (force text colors for light theme) ===== */
+h1, h2, h3, h4, h5, h6 { color: var(--text) !important; }
+p, li, span, small { color: rgba(11,18,32,0.86); }
+
+.muted { color: rgba(11,18,32,0.68) !important; }
+.kicker { color: rgba(11,18,32,0.55) !important; }
+.lead { color: rgba(11,18,32,0.82) !important; }
+
+/* hero card list + mini links */
+.card li { color: rgba(11,18,32,0.82) !important; }
+.mini-links a { color: rgba(11,18,32,0.72) !important; }
+.mini-links a:hover { color: rgba(11,18,32,0.95) !important; }
+
+/* chips + tags */
+.chip { color: rgba(11,18,32,0.75) !important; }
+.tag { color: rgba(11,18,32,0.78) !important; }
+
+/* section backgrounds (keep clean white) */
+.section.alt{
+  background: linear-gradient(180deg, rgba(37,99,235,0.035), rgba(255,255,255,0.0) 65%) !important;
+}
