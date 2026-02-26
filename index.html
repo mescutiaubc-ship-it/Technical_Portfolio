@@ -1,291 +1,262 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Mateo Escutia Avila — Portfolio</title>
-  <meta name="description" content="Electrical / Power / Systems — building safe, test-validated electrical systems, power distribution, PCB design, and reliable prototypes."/>
-  <link rel="stylesheet" href="/styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateo Escutia Avila | Electrical • Power • Systems</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
 
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="/">
-        <div class="avatar">ME</div>
-        <div class="title">
-          <strong>Mateo Escutia Avila</strong>
-          <span>Electrical • Power • Systems</span>
+<body>
+  <!-- =========================
+       NAV (top)
+       ========================= -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <div class="brand-mark">ME</div>
+        <div class="brand-text">
+          <div class="brand-name">Mateo Escutia Avila</div>
+          <div class="brand-tag">ELECTRICAL • POWER • SYSTEMS</div>
         </div>
       </a>
 
-      <nav class="navlinks">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/projects/">Projects</a>
-        <a href="/leadership/">Leadership</a>
-        <a href="/interests/">Interests</a>
-        <a class="cta" href="/contact/">Contact</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#interests">Interests</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
+  <main>
+    <!-- =========================
+         HERO (full-screen)
+         ========================= -->
+    <section id="home" class="hero">
+      <!-- CHANGE THIS IMAGE PATH/FILENAME ONLY:
+           Put your photo here: /assets/images/profile.jpeg (or .jpg/.png)
+      -->
+      <div class="hero-bg" role="img" aria-label="Profile background image"></div>
+      <div class="hero-overlay"></div>
 
-    <!-- HERO -->
-<!-- HERO START -->
-    <section class="hero hero--photo">
-      <div class="hero-bg" aria-hidden="true"></div>
-
-      <div class="hero-inner">
-        <p class="hero-kicker">WELCOME TO MY</p>
-        <h1 class="hero-title">ENGINEERING PORTFOLIO</h1>
-        <div class="hero-rule"></div>
-        <p class="hero-name">MATEO ESCUTIA AVILA</p>
-      </div>
-    </section>
-   
-    </section  id="about" class="section">
-      <div class="hero-card">
-        <div class="kicker">Engineering •  Athlete • Team Player </div>
-        <h1>
-          I turn ambiguous problems into <span class="accent">safe, test-validated</span> electrical systems.
+      <div class="hero-content">
+        <div class="hero-eyebrow">WELCOME TO MY</div>
+        <h1 class="hero-title">
+          ENGINEERING<br />
+          PORTFOLIO
         </h1>
-        <p class="sub">
-          UBC Integrated Engineering student building power distribution plans, protection, PCB systems, and reliable prototypes.
-          I’m at my best when there’s no clear playbook: I research standards, define requirements, test deliberately, and communicate decisions—always with care for the people using the system.
-        </p>
+
+        <div class="hero-accent-line"></div>
+        <div class="hero-name">MATEO ESCUTIA AVILA</div>
 
         <div class="hero-actions">
-          <a class="btn" href="/projects/">View Projects</a>
-          <a class="btn secondary" href="/about/">How I work</a>
-        </div>
-
-        <div class="chips">
-          <span class="chip">Vancouver, BC</span>
-          <span class="chip">Power Distribution</span>
-          <span class="chip">PCB (Altium)</span>
-          <span class="chip">Validation Mindset</span>
-          <span class="chip">Clear Communication</span>
-        </div>
-      </div>
-
-      <aside class="hero-aside">
-        <div class="hero-card">
-          <div class="profile">
-
-            <!-- CHANGE ONLY THE FILENAME HERE -->
-            <img src="/assets/images/headshot1.jpeg" alt="Mateo Escutia Avila headshot"/>
-            <div>
-              <div class="name">Currently focused</div>
-              <div class="line">Power architecture • electronics • staged testing</div>
-            </div>
-          </div>
-
-          <ul class="aside-list">
-            <li><strong>Puck Em’ Back</strong>: power architecture + protection + staged testing</li>
-            <li><strong>Smart City UAV</strong>: electronics + motor/ESC sizing + system headroom</li>
-            <li><strong>Hiking Pole</strong>: energy harvesting + circuit prototyping</li>
-          </ul>
-
-          <div class="mini-links">
-            <a href="https://www.linkedin.com/in/mateoescutia-igen-ubc/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/mescutiaubc-ship-it" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:1cc872d0-2dce-413e-96ba-cd95b67e7409" target="_blank" rel="noopener">Resume</a>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <!-- ABOUT SNAPSHOT -->
-    <section class="section" id="about-snapshot">
-      <div class="section-header">
-        <div class="kicker">About</div>
-        <h2 class="h2">What I do</h2>
-        <p class="p">Concise by default. Deep detail lives in “Read more”.</p>
-      </div>
-
-      <div class="two-col">
-        <div class="panel">
-          <h3>Engineering (hands-on)</h3>
-          <ul>
-            <li>Power distribution plans, protection, fusing, AWG selection, load budgeting</li>
-            <li>PCB design + datasheet-driven part selection + decoupling strategy</li>
-            <li>Test plans, staged validation, safety & reliability thinking</li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <h3>Leadership & communication</h3>
-          <ul>
-            <li>Lead Coach (USGC): coaching structure + event coordination</li>
-            <li>NextGen Latinos Mentor: 1:1 guidance for new engineering students</li>
-            <li>Project co-lead habits: align requirements, document decisions, unblock teams</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="hero-actions" style="margin-top:16px;">
-        <a class="btn secondary" href="/about/">Read my background →</a>
-      </div>
-    </section>
-
-    <!-- PROJECTS (FEATURED) -->
-    <section class="section" id="projects-preview">
-      <div class="section-header">
-        <div class="kicker">Projects</div>
-        <h2 class="h2">Featured</h2>
-        <p class="p">Three deep case studies. More photos + documentation added over time.</p>
-      </div>
-
-      <div class="grid">
-        <article class="card">
-
-    
-          <!-- CHANGE FILENAME HERE -->
-          <img src="/assets/images/puck.png" alt="Puck Em Back project image"/>
-          <div class="body">
-            <div class="meta">Capstone • Power Systems</div>
-            <h3>Puck Em’ Back</h3>
-            <p>Designed power architecture + protection strategy and validated through staged testing.</p>
-            <div class="tags">
-              <span class="tag">Safety</span><span class="tag">Fusing</span><span class="tag">Load Budget</span>
-            </div>
-            <a class="readmore" href="/projects/puck-em-back.html">Read more →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/images/uav.png" alt="Smart City UAV project image"/>
-          <div class="body">
-            <div class="meta">UBC Smart City • UAV Electronics</div>
-            <h3>Smart Response Drone</h3>
-            <p>Electronics + power planning for multi-drone system; datasheets, headroom, and testing.</p>
-            <div class="tags">
-              <span class="tag">ESC/Motor</span><span class="tag">Power</span><span class="tag">Reliability</span>
-            </div>
-            <a class="readmore" href="/projects/smart-city-uav.html">Read more →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/images/poleteam.jpeg" alt="Self-charging hiking pole project image"/>
-          <div class="body">
-            <div class="meta">Energy Harvesting • Prototyping</div>
-            <h3>Self-Charging Hiking Pole</h3>
-            <p>Energy harvesting concept + circuit prototyping focused on usability and robustness.</p>
-            <div class="tags">
-              <span class="tag">Prototyping</span><span class="tag">Circuits</span><span class="tag">Testing</span>
-            </div>
-            <a class="readmore" href="/projects/self-charging-pole.html">Read more →</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="hero-actions" style="margin-top:16px;">
-        <a class="btn secondary" href="/projects/">Browse all projects →</a>
-      </div>
-    </section>
-
-    <!-- LEADERSHIP PREVIEW -->
-    <section class="section" id="leadership-preview">
-      <div class="section-header">
-        <div class="kicker">Leadership</div>
-        <h2 class="h2">Mentorship & team impact</h2>
-        <p class="p">I’m multi-faceted: I build systems, and I help people execute confidently.</p>
-      </div>
-
-      <div class="grid">
-        <article class="card">
-          <img src="/assets/images/usgc-1.png" alt="USGC leadership image"/>
-          <div class="body">
-            <div class="meta">USGC</div>
-            <h3>Lead Coach</h3>
-            <p>Structured coaching rotations, clear feedback loops, and event coordination.</p>
-            <a class="readmore" href="/leadership/">Read more →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/images/lla-1.jpg" alt="LLA mentorship image"/>
-          <div class="body">
-            <div class="meta">NextGen Latinos</div>
-            <h3>Mentor</h3>
-            <p>1:1 support for international students navigating UBC + engineering success systems.</p>
-            <a class="readmore" href="/leadership/">Read more →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/images/ml-specialization.png" alt="Machine Learning specialization certificate"/>
-          <div class="body">
-            <div class="meta">Learning</div>
-            <h3>Machine Learning Specialization</h3>
-            <p>Modern ML foundations—moving toward ML dev workflows (React + REST APIs).</p>
-            <a class="readmore" href="/projects/ml-specialization.html">Read more →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- INTERESTS PREVIEW -->
-    <section class="section" id="interests-preview">
-      <div class="section-header">
-        <div class="kicker">Personal</div>
-        <h2 class="h2">Interests & idea lab</h2>
-        <p class="p">Projects I prototype for curiosity—product thinking + human-centered engineering.</p>
-      </div>
-
-      <div class="two-col">
-        <div class="panel">
-          <h3>Idea projects</h3>
-          <ul>
-            <li>Smart circadian lighting concept</li>
-            <li>Ēthos: “mind gym” app concept for mental-model training</li>
-            <li>Other experiments (to be added)</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Hobbies</h3>
-          <div class="tags">
-            <span class="tag">Piano</span><span class="tag">Guitar</span><span class="tag">Gym</span>
-            <span class="tag">Calisthenics</span><span class="tag">Tennis</span><span class="tag">Reading</span>
-            <span class="tag">Poetry</span><span class="tag">Basketball</span>
-          </div>
-          <div style="margin-top:12px;">
-            <a class="readmore" href="/interests/">See more →</a>
-          </div>
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="#about">How I work</a>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT PREVIEW -->
-    <section class="section" id="contact-preview">
-      <div class="section-header">
-        <div class="kicker">Contact</div>
-        <h2 class="h2">Get in touch</h2>
-        <p class="p">Interested in collaborating or just want to talk engineering? Reach out.</p>
-      </div>
-
-<!--CONTACT LINKS-->
-        <div class="contact-row">
-          <a class="btn" href="mailto:mescutia@student.ubc.ca">Email me</a>
-          <a class="btn secondary" href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:1cc872d0-2dce-413e-96ba-cd95b67e7409" target="_blank" rel="noopener">Resume</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/mateoescutia-igen-ubc/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn secondary" href="https://github.com/mescutiaubc-ship-it" target="_blank" rel="noopener">GitHub</a>
-        </div>
-    </section>
-
-    <footer class="footer">
+    <!-- =========================
+         ABOUT
+         ========================= -->
+    <section id="about" class="section">
       <div class="container">
-        © <span id="year"></span> Mateo Escutia Avila
-      </div>
-    </footer>
+        <div class="section-kicker">ABOUT</div>
+        <h2 class="section-title">How I think and build</h2>
+        <p class="section-subtitle">
+          I’m at my best when there’s no clear playbook: I research standards, define requirements,
+          test deliberately, and communicate decisions so teams can execute confidently—with care for
+          the people using the system.
+        </p>
 
+        <div class="grid two">
+          <div class="card">
+            <h3>What I do as an engineer</h3>
+            <ul class="bullets">
+              <li>Power distribution planning: loads, headroom, component ratings, and protection</li>
+              <li>Safety-first wiring: fusing strategy, switching, grounding approach, documentation</li>
+              <li>PCB + prototyping: breadboard → validation → iteration</li>
+              <li>Testing mindset: staged checks, failure modes, and clear acceptance criteria</li>
+              <li>Communication: explain tradeoffs, align stakeholders, ship responsibly</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Multi-faceted profile</h3>
+            <ul class="bullets">
+              <li>Engineering rigor + calm, clear communication</li>
+              <li>Project coordination from leadership roles (USGC lead coach, mentorship)</li>
+              <li>Empathy-driven: design for safety, usability, and real people</li>
+              <li>Self-directed learning: I build skill fast when faced with unfamiliar problems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PROJECTS (cards + "Read more")
+         ========================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-kicker">PROJECTS</div>
+        <h2 class="section-title">Featured projects</h2>
+        <p class="section-subtitle">Short case studies now. More photos + documentation added over time.</p>
+
+        <div class="grid three">
+          <article class="card project-card">
+            <!-- CHANGE IMAGE: /assets/images/puck.jpg -->
+            <img class="project-img" src="assets/images/puck.jpg" alt="Puck ’Em Back project cover" />
+            <div class="project-body">
+              <h3>Puck ’Em Back (Capstone)</h3>
+              <p>Power architecture + protection + staged testing for a public-facing prototype.</p>
+              <a class="link" href="projects/puck-em-back.html">Read more →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <!-- CHANGE IMAGE: /assets/images/uav.jpg -->
+            <img class="project-img" src="assets/images/uav.jpg" alt="Smart City UAV project cover" />
+            <div class="project-body">
+              <h3>Smart City UAV</h3>
+              <p>Electronics integration + motor/ESC sizing + system headroom for reliable operation.</p>
+              <a class="link" href="projects/smart-city-uav.html">Read more →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <!-- CHANGE IMAGE: /assets/images/pole.jpg -->
+            <img class="project-img" src="assets/images/pole.jpg" alt="Self-charging hiking pole project cover" />
+            <div class="project-body">
+              <h3>Self-Charging Trekking Pole</h3>
+              <p>Energy harvesting concept + circuit prototyping + validation-first iteration.</p>
+              <a class="link" href="projects/self-charging-pole.html">Read more →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid one mt">
+          <article class="card project-card wide">
+            <!-- CHANGE IMAGE: /assets/images/ml-cert.jpg -->
+            <img class="project-img wide-img" src="assets/images/ml-cert.jpg" alt="Machine learning specialization certificate" />
+            <div class="project-body">
+              <h3>Machine Learning Specialization</h3>
+              <p>Structured ML fundamentals (supervised, unsupervised, and best practices) with practical projects.</p>
+              <a class="link" href="projects/ml-specialization.html">Read more →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         LEADERSHIP (USGC + LLA)
+         ========================= -->
+    <section id="leadership" class="section">
+      <div class="container">
+        <div class="section-kicker">LEADERSHIP</div>
+        <h2 class="section-title">Mentorship & team impact</h2>
+        <p class="section-subtitle">
+          I lead with clarity, empathy, and structure—so people feel supported and projects move forward.
+        </p>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>USGC — Lead Coach</h3>
+            <!-- CHANGE IMAGE: /assets/images/usgc.jpg -->
+            <img class="media" src="assets/images/usgc.jpg" alt="USGC coaching / event photo" />
+            <p class="muted">
+              Coaching structure, drills, and event flow—focused on welcoming beginners and keeping sessions high-energy and safe.
+            </p>
+            <!-- If you create /leadership/index.html later, point here -->
+            <a class="link" href="leadership/index.html">Read more →</a>
+          </div>
+
+          <div class="card">
+            <h3>NextGen Latinos — Mentor</h3>
+
+            <!-- ADD YOUR LLA PHOTOS HERE:
+                 Put files in /assets/images/lla-1.jpg and /assets/images/lla-2.jpg
+                 Then these will show automatically.
+            -->
+            <div class="grid two tight">
+              <img class="media" src="assets/images/lla-1.jpg" alt="LLA mentorship photo 1" />
+              <img class="media" src="assets/images/lla-2.jpg" alt="LLA mentorship photo 2" />
+            </div>
+
+            <ul class="bullets mt-sm">
+              <li>1:1 support for international students transitioning into UBC engineering</li>
+              <li>Study strategies, resources, and planning systems for academic success</li>
+              <li>Guidance on navigating UBC life: clubs, events, community</li>
+            </ul>
+
+            <!-- Optional: link the PDF inside your repo later -->
+            <!-- Example: <a class="link" href="assets/docs/LLA-NEXTGEN-Latinos.pdf" target="_blank" rel="noopener">View mentorship guide (PDF) →</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         INTERESTS (matches your screenshot style)
+         ========================= -->
+    <section id="interests" class="section">
+      <div class="container">
+        <div class="section-kicker">PERSONAL</div>
+        <h2 class="section-title">Interests & idea lab</h2>
+        <p class="section-subtitle">Projects I prototype for curiosity—product thinking + human-centered engineering.</p>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Idea projects</h3>
+            <ul class="bullets">
+              <li>Smart circadian lighting concept</li>
+              <li>Ēthos: “mind gym” app concept for mental-model training</li>
+              <li>Other experiments (to be added)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Hobbies</h3>
+            <p class="muted">
+              Piano • Guitar • Gym • Calisthenics • Tennis • Reading • Poetry • Basketball
+            </p>
+            <a class="link" href="interests/index.html">See more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACT (matches your screenshot buttons)
+         ========================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-kicker">CONTACT</div>
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-subtitle">Interested in collaborating or just want to talk engineering? Reach out.</p>
+
+        <div class="button-row">
+          <!-- Your links (already provided) -->
+          <a class="btn primary" href="mailto:mescutia@student.ubc.ca">Email me</a>
+          <a class="btn" href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:f648da9a-08f9-44ef-87da-6a90fcf35b5c" target="_blank" rel="noopener">Resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/mateoescutia-igen-ubc/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/mescutiaubc-ship-it" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        <footer class="site-footer">
+          <span>© <span id="year"></span> Mateo Escutia Avila</span>
+        </footer>
+      </div>
+    </section>
   </main>
 
   <script>
-    // Tiny helper for the footer year (optional)
+    // tiny helper for the footer year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
