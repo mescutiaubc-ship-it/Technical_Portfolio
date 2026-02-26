@@ -368,3 +368,69 @@ main{ padding: 38px 0 72px; }
   .brand{ min-width: unset; }
   .hero h1{ font-size: 42px; }
 }
+
+/* ===== HERO PHOTO LANDING (ABOVE THE FOLD) ===== */
+.hero--photo{
+  position: relative;
+  min-height: 100vh;              /* full screen */
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 96px 24px;
+}
+
+.hero--photo .hero-bg{
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/images/profile.jpeg");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  filter: blur(10px);
+}
+
+.hero--photo .hero-bg::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.78); /* white overlay for readability */
+}
+
+.hero--photo .hero-inner{
+  position: relative;
+  text-align: center;
+  max-width: 980px;
+  padding: 24px;
+}
+
+.hero--photo .hero-kicker{
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(10,16,28,0.65);
+  margin-bottom: 10px;
+}
+
+.hero--photo .hero-title{
+  font-size: clamp(44px, 7vw, 86px);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero--photo .hero-rule{
+  width: 74px;
+  height: 4px;
+  margin: 18px auto 16px;
+  border-radius: 999px;
+  background: rgba(40,90,255,0.9);
+}
+
+.hero--photo .hero-name{
+  font-size: 18px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(40,90,255,0.95);
+  margin: 0;
+}
