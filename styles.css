@@ -155,7 +155,7 @@ body.subpage .topbar{position:static;top:auto}
 .hero-bg{
   position:absolute;
   inset:0;
-  background-image:url("assets/images/profile.jpeg"); /* <-- change filename here */
+  background-image:url("/assets/images/profile.jpeg"); /* <-- change filename here */
   background-size:cover;
   background-position:center;
   transform:scale(1.05);
