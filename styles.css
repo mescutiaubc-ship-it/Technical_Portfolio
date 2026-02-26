@@ -414,3 +414,22 @@ body.subpage .topbar{position:static;top:auto}
   color:rgba(71,85,105,.90);
   font-weight:600;
 }
+
+/* ===== Hero title: subtle 3D depth ===== */
+.hero-title{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.55),
+    0 10px 26px rgba(2,8,23,0.22);
+  transform: translateZ(0);
+  letter-spacing: 0.015em;
+}
+
+.hero-content{
+  perspective: 900px;
+}
+
+/* optional: gentle interactive tilt on hover */
+.hero-content:hover .hero-title{
+  transform: translateY(-2px) rotateX(4deg);
+  transition: transform .22s ease;
+}
