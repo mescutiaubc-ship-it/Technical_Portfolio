@@ -290,7 +290,7 @@ body.subpage .topbar{position:static;top:auto}
 .btn:hover{transform:translateY(-1px);transition:.15s ease}
 
 .btn.primary{
-  border-color:rgba(37,99,235,.30);
+  border-color:rgba(84, 127, 218, 0.3);
   background:var(--blue-soft);
 }
 
