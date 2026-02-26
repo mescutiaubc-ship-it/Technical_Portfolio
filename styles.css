@@ -290,7 +290,7 @@ body.subpage .topbar{position:static;top:auto}
 .btn:hover{transform:translateY(-1px);transition:.15s ease}
 
 .btn.primary{
-  border-color:rgba(37,99,235,.30);
+  border-color:rgba(84, 127, 218, 0.3);
   background:var(--blue-soft);
 }
 
@@ -413,4 +413,46 @@ body.subpage .topbar{position:static;top:auto}
   border-top:1px solid var(--border);
   color:rgba(71,85,105,.90);
   font-weight:600;
+}
+
+/* ===== Nav micro-interactions ===== */
+.topbar .navlinks a{
+  position: relative;
+  padding: 6px 2px;
+  transition: transform .18s ease, color .18s ease, opacity .18s ease;
+}
+
+.topbar .navlinks a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 2px;
+  background: rgba(37,99,235,0.85);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .18s ease;
+  border-radius: 999px;
+  opacity: .9;
+}
+
+.topbar .navlinks a:hover{
+  transform: translateY(-1px);
+  color: var(--text);
+}
+
+.topbar .navlinks a:hover::after{
+  transform: scaleX(1);
+}
+
+/* CTA: slightly “pill pop” */
+.topbar .navlinks .cta{
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.topbar .navlinks .cta:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(37,99,235,0.16);
+  background: rgba(37,99,235,0.10);
 }
