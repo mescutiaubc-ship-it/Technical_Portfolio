@@ -511,3 +511,81 @@ a{ color: inherit; text-decoration: none; }
   );
   pointer-events:none;
 }
+
+/* Force equal-height cards in 2-col grids */
+.grid.two {
+  align-items: stretch; /* key */
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push “Read more” to the bottom of the card */
+.card .readmore {
+  margin-top: auto;
+  padding-top: 12px;
+}
+/* Force equal-height cards in 2-col grids */
+.grid.two {
+  align-items: stretch; /* key */
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push “Read more” to the bottom of the card */
+.card .readmore {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+
+/* =========================
+   "Read more" adjustment #1
+   ========================= */
+
+.readmore summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent, #2f66ff);
+  list-style: none;
+}
+
+.readmore summary::-webkit-details-marker {
+  display: none;
+}
+
+.readmore summary::after {
+  content: " ↘";
+  opacity: 0.8;
+}
+
+.readmore[open] summary::after {
+  content: " ↗";
+}
+
+.readmore-body {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(15, 23, 42, 0.10);
+}
+
+.grid.two {
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-footer {
+  margin-top: auto; /* pushes link to bottom */
+}
