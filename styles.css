@@ -544,7 +544,20 @@ a{ color: inherit; text-decoration: none; }
   margin-top: auto;
   padding-top: 12px;
 }
+/* ===== Project pages: better top spacing ===== */
+.page {
+  padding-top: 96px; /* gives room under your sticky header */
+}
 
+.page .page-title {
+  margin-top: 12px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
 
 /* =========================
    "Read more" adjustment #1
@@ -588,4 +601,50 @@ a{ color: inherit; text-decoration: none; }
 
 .card-footer {
   margin-top: auto; /* pushes link to bottom */
+}
+
+.readmore-link {
+  font-weight: 600;
+  color: #2f66ff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.readmore-link:hover {
+  opacity: 0.7;
+}
+
+/* ===== Hero: subtle float animation ===== */
+.hero-card {
+  position: relative;
+  will-change: transform;
+  animation: heroFloat 6s ease-in-out infinite;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+}
+
+/* optional: a softer “base shadow” underneath */
+.hero-card::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -18px;
+  height: 26px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(6px);
+  z-index: -1;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* accessibility: disable motion if user prefers */
+@media (prefers-reduced-motion: reduce) {
+  .hero-card { animation: none; }
+}
+
+.page {
+  padding-top: 96px;
 }
