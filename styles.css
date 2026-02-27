@@ -461,51 +461,6 @@ body.subpage .topbar{position:static;top:auto}
 
 /* ===== Contact Buttons w/ Icons ===== */
 
-<<<<<<< HEAD
-.contact-buttons{
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-.contact-btn{
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-
-  padding: 18px 34px;
-  border-radius: 60px;
-
-  border: 3px solid #2f66ff;
-  color: #2f66ff;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-
-  transition: all .2s ease;
-}
-
-.contact-btn:hover{
-  background: #2f66ff;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(47,102,255,0.25);
-}
-
-.contact-btn .icon{
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-btn svg{
-  width: 22px;
-  height: 22px;
-  stroke: currentColor;
-}
-=======
 /* =========================
    Contact Buttons (centered, smaller, hover-fill + ripple)
    ========================= */
@@ -599,4 +554,3 @@ body.subpage .topbar{position:static;top:auto}
 @media (max-width: 600px){
   .contact-btn{ min-width: 160px; }
 }
->>>>>>> fb2b054 (New Format)
