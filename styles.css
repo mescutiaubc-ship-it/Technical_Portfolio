@@ -294,6 +294,7 @@ body.subpage .topbar{position:static;top:auto}
   background:var(--blue-soft);
 }
 
+
 .button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
 .link{
@@ -455,4 +456,101 @@ body.subpage .topbar{position:static;top:auto}
   transform: translateY(-1px);
   box-shadow: 0 12px 26px rgba(37,99,235,0.16);
   background: rgba(37,99,235,0.10);
+}
+
+
+/* ===== Contact Buttons w/ Icons ===== */
+
+/* =========================
+   Contact Buttons (centered, smaller, hover-fill + ripple)
+   ========================= */
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+/* Smaller than before; slightly bigger than footer text */
+.contact-btn{
+  position:relative;
+  overflow:hidden;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  padding:12px 18px;
+  min-width: 178px;
+
+  border-radius:999px;
+  border:2px solid rgba(37,99,235,0.85);
+  background:transparent;
+
+  color:rgba(37,99,235,0.95);
+  font-weight:800;
+  letter-spacing:0.14em;
+  font-size:13px;
+
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+}
+
+/* icon sizing */
+.contact-btn .icon{
+  width:18px;
+  height:18px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.contact-btn svg{
+  width:18px;
+  height:18px;
+  stroke:currentColor;
+}
+
+/* Hover = autofill */
+.contact-btn:hover{
+  background:rgba(37,99,235,0.92);
+  color:#fff;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 28px rgba(37,99,235,0.18);
+}
+
+/* tiny bounce back */
+.contact-btn:active{
+  transform: translateY(0) scale(0.99);
+  box-shadow:none;
+}
+
+/* Ripple effect */
+.contact-btn::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.65);
+  transform:translate(-50%,-50%) scale(0);
+  opacity:0;
+  pointer-events:none;
+}
+
+.contact-btn:active::after{
+  animation: contactRipple .55s ease-out;
+}
+
+@keyframes contactRipple{
+  0%   { transform:translate(-50%,-50%) scale(0); opacity:.55; }
+  100% { transform:translate(-50%,-50%) scale(22); opacity:0; }
+}
+
+/* Mobile: allow tighter layout */
+@media (max-width: 600px){
+  .contact-btn{ min-width: 160px; }
 }
