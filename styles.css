@@ -353,17 +353,40 @@ body.subpage .topbar{position:static;top:auto}
 /* =========================
    About: header row (text + photo)
    ========================= */
+/* =========================
+   About: header row (text + photo) — improved spacing
+   ========================= */
 .about-header-row{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:28px;
+  grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);
+  gap:32px;
   align-items:start;
   margin-bottom:40px;
 }
 
-.about-header-text h2{margin-top:6px}
-.about-header-photo{display:flex;justify-content:flex-end}
+.about-header-text{
+  max-width: 70ch;       /* matches section-subtitle rhythm */
+  padding-right: 10px;   /* subtle breathing room from photo */
+}
 
+.about-header-photo{
+  display:flex;
+  justify-content:flex-end;
+}
+
+@media (max-width:900px){
+  .about-header-row{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .about-header-photo{
+    justify-content:flex-start;
+  }
+  .about-header-text{
+    padding-right:0;
+    max-width:none;
+  }
+}
 .photo-card{
   position:relative;
   width:100%;
