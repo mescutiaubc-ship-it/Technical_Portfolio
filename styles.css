@@ -138,6 +138,14 @@ body.subpage .topbar{position:static;top:auto}
   max-width:70ch;
   line-height:1.55;
 }
+
+.section-subtitle-2{
+  margin:0 0 28px 0;
+  margin-bottom: 20px;
+  color:var(--muted);
+  max-width:70ch;
+  line-height:1.55;
+}
 .muted{color:var(--muted);line-height:1.55}
 .mt{margin-top:18px}
 .mt-sm{margin-top:10px}
