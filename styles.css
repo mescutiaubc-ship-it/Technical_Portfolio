@@ -686,11 +686,3 @@ body.subpage .topbar{position:static;top:auto}
 }
 .style3 .lead .frame{ margin-bottom: 10px; }
 
-.text-block p {
-  margin-bottom: 10px; /* Adjust the value as needed */
-  margin-top: 0; /* Optional: remove default top margin if needed */
-}
-        /* This targets the very last paragraph specifically to remove extra space at the bottom of the div */
-.text-block p:last-child {
-  margin-bottom: 0;
-}
