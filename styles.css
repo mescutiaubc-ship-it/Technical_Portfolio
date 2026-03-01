@@ -133,6 +133,7 @@ body.subpage .topbar{position:static;top:auto}
 }
 .section-subtitle{
   margin:0 0 28px 0;
+  margin-bottom: 12px;
   color:var(--muted);
   max-width:70ch;
   line-height:1.55;
@@ -576,4 +577,120 @@ body.subpage .topbar{position:static;top:auto}
 /* Mobile: allow tighter layout */
 @media (max-width: 600px){
   .contact-btn{ min-width: 160px; }
+}
+
+/* =========================
+   Project Story Styles (style1/2/3)
+   Reusable section patterns
+   ========================= */
+
+/* Generic helpers (used by all styles) */
+.story{
+  margin-top: 22px;
+}
+
+.story p{ margin: 0 0 12px; }
+.story h3{ margin: 0 0 10px; font-size: 18px; }
+.story .caption{
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Clean image frame (no “card” look, but consistent borders) */
+.story .frame{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+.story .frame img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive gallery */
+.gallery{
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+.gallery.grid-2{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+.gallery.grid-3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+@media (max-width: 900px){
+  .gallery.grid-2, .gallery.grid-3{ grid-template-columns: 1fr; }
+}
+
+/* Two-column split */
+.split{
+  display: grid;
+  grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr);
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 900px){
+  .split{ grid-template-columns: 1fr; }
+}
+
+/* Callout boxes (white boxes like your UAV “My Role / Engineering Focus”) */
+.callouts{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+@media (max-width: 900px){
+  .callouts{ grid-template-columns: 1fr; }
+}
+.callouts .callout{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+.callouts .callout ul{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+  color: rgba(11,18,32,.88);
+}
+
+/* =========================
+   STYLE 1
+   a) Split (text left + photo right), then narrative full-width,
+      then diagrams gallery auto (2-col on desktop)
+   ========================= */
+.style1 .diag-grid{
+  margin-top: 12px;
+}
+
+/* =========================
+   STYLE 2
+   b) Two full-width images with captions, then two callout boxes
+   ========================= */
+.style2 .top-media{
+  margin-top: 12px;
+}
+.style2 .top-media .frame{ margin-bottom: 14px; }
+
+/* =========================
+   STYLE 3
+   c) Hybrid / “mesh”
+   Lead image full-width, then split text/media, then callouts, then gallery
+   ========================= */
+.style3 .lead{
+  margin-top: 12px;
+}
+.style3 .lead .frame{ margin-bottom: 10px; }
+
+.text-block p {
+  margin-bottom: 10px; /* Adjust the value as needed */
+  margin-top: 0; /* Optional: remove default top margin if needed */
+}
+        /* This targets the very last paragraph specifically to remove extra space at the bottom of the div */
+.text-block p:last-child {
+  margin-bottom: 0;
 }

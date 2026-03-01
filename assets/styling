@@ -1,0 +1,12 @@
+<style>
+  .more-space {
+    word-spacing: 15px; /* Adds 15px of space between words */
+    letter-spacing: 2px; /* Adds 2px of space between letters */
+    padding-left: 10px; /* Adds internal space to the left of the span content */
+  }
+</style>
+
+<p>
+  This is some normal text.
+  <span class="more-space">This text has more space.</span>
+</p>
