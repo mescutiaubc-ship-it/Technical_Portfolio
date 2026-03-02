@@ -139,6 +139,10 @@
          PROJECTS (cards + "Read more")
          ========================= -->
     <section id="projects" class="section">
+      
+      <div id="projects-grid" class="grid three"></div>
+      <div id="projects-wide" class="grid one mt"></div>
+      
       <div class="container">
         <div class="section-kicker">PROJECTS</div>
         <h2 class="section-title">Featured projects</h2>
@@ -242,6 +246,7 @@
          INTERESTS (matches your screenshot style)
          ========================= -->
     <section id="interests" class="section">
+      <div id="interests-grid" class="grid two"></div>
       <div class="container">
         <div class="section-kicker">PERSONAL</div>
         <h2 class="section-title">Interests & Idea labs</h2>
@@ -343,6 +348,30 @@
   <script>
     // tiny helper for the footer year
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    document.querySelectorAll(".video-tile").forEach(tile => {
+      const overlay = tile.querySelector(".play-overlay");
+      if (!overlay) return;
+
+      overlay.addEventListener("click", () => {
+        const src = tile.getAttribute("data-embed");
+        if (!src) return;
+
+        // Prevent double-inject
+        if (tile.querySelector("iframe")) return;
+
+        const iframe = document.createElement("iframe");
+        iframe.src = src;
+        iframe.title = "Embedded video";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allowFullscreen = true;
+
+        tile.appendChild(iframe);
+        tile.classList.add("is-playing");
+      });
+    });
   </script>
 </body>
 </html>

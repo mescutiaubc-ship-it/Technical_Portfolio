@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "title": "Puck ’Em Back (Capstone)",
+      "desc": "Power architecture + protection + staged testing for a public-facing prototype.",
+      "image": "/assets/images/puck.png",
+      "alt": "Puck ’Em Back project cover",
+      "href": "/projects/puck-em-back.html"
+    },
+    {
+      "title": "Smart City UAV",
+      "desc": "Electronics integration + motor/ESC sizing + system headroom for reliable operation.",
+      "image": "/assets/images/uav.png",
+      "alt": "Smart City UAV project cover",
+      "href": "/projects/smart-city-uav.html"
+    },
+    {
+      "title": "Self-Charging Trekking Pole",
+      "desc": "Energy harvesting concept + circuit prototyping + validation-first iteration.",
+      "image": "/assets/images/poleteam.jpeg",
+      "alt": "Self-charging hiking pole project cover",
+      "href": "/projects/self-charging-pole.html"
+    }
+  ],
+  "featuredWide": {
+    "title": "Machine Learning Specialization",
+    "desc": "Structured ML fundamentals (supervised, unsupervised, and best practices) with practical projects.",
+    "image": "/assets/images/ml-specialization.png",
+    "alt": "Machine learning specialization certificate",
+    "href": "/projects/ml-specialization.html"
+  }
+}

@@ -694,3 +694,156 @@ body.subpage .topbar{position:static;top:auto}
 }
 .style3 .lead .frame{ margin-bottom: 10px; }
 
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   Video Tile (reusable)
+   ========================= */
+
+/* Make all gallery items feel consistent */
+.gallery .frame{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+}
+
+/* Images: subtle hover “preview” */
+.gallery .frame img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform .22s ease, filter .22s ease;
+}
+.gallery .frame:hover img{
+  transform: scale(1.02);
+  filter: saturate(1.05);
+}
+
+/* Video wrapper keeps aspect ratio + lets us overlay play button */
+.video-tile{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;        /* default; can override per video */
+  background: #0b1220;
+  display: grid;
+  place-items: center;
+}
+
+/* If you’re embedding Shorts, use this modifier */
+.video-tile.is-shorts{
+  aspect-ratio: 9 / 16;
+}
+
+/* Iframe fills tile */
+.video-tile iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Optional: thumbnail layer (used for hover preview + click-to-play) */
+.video-tile .video-thumb{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform .22s ease, filter .22s ease, opacity .2s ease;
+  filter: saturate(1.02);
+}
+
+/* Subtle hover preview effect on thumbnail */
+.frame:hover .video-tile .video-thumb{
+  transform: scale(1.03);
+  filter: saturate(1.08) contrast(1.02);
+}
+
+/* Play overlay */
+.video-tile .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, rgba(255,255,255,.10) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,.25) 100%);
+  opacity: 1;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+/* Play button (clean, subtle) */
+.video-tile .play-btn{
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,.75);
+  background: rgba(0,0,0,.25);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  transform: translateY(0);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.video-tile .play-btn::before{
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 14px solid rgba(255,255,255,.92);
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  margin-left: 3px;
+}
+
+/* Hover micro-interaction */
+.frame:hover .video-tile .play-btn{
+  transform: translateY(-1px) scale(1.02);
+  background: rgba(0,0,0,.32);
+  border-color: rgba(255,255,255,.90);
+}
+
+/* When playing: hide thumbnail + overlay */
+.video-tile.is-playing .video-thumb,
+.video-tile.is-playing .play-overlay{
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Clickable cursor */
+.video-tile .play-overlay{
+  cursor: pointer;
+
+}/* Responsive video inside .frame */
+.frame iframe{
+  width: 100%;
+  aspect-ratio: 9 / 16; /* Good for Shorts vertical video */
+  /* Use aspect-ration: 16 / 9 for horizontal videos*/
+  border: 0;
+  display: block;
+}
+
+.video-tile .video-thumb{
+  pointer-events: none;
+}
+.video-tile .play-overlay{
+  z-index: 3;
+}
+.video-tile iframe{
+  z-index: 2;
+  position: relative;
+}
+.video-tile .video-thumb{
+  z-index: 1;
+}

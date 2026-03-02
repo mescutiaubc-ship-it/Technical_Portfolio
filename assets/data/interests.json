@@ -1,0 +1,18 @@
+{
+  "interests": [
+    {
+      "title": "Idea projects",
+      "bullets": [
+        "Smart circadian lighting concept",
+        "Ēthos: “mind gym” app concept for mental-model training",
+        "Other experiments (to be added)"
+      ]
+    },
+    {
+      "title": "Hobbies",
+      "desc": "Piano • Guitar • Gym • Calisthenics • Tennis • Reading • Poetry • Basketball",
+      "href": "/interests/index.html",
+      "linkText": "See more →"
+    }
+  ]
+}
