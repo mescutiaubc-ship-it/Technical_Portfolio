@@ -847,3 +847,71 @@ body.subpage .topbar{position:static;top:auto}
 .video-tile .video-thumb{
   z-index: 1;
 }
+
+/* =========================
+   Interests 3x3 Gallery
+   ========================= */
+.interest-grid-3x3{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:14px;
+  margin-top:18px;
+}
+
+@media (max-width:900px){
+  .interest-grid-3x3{grid-template-columns:repeat(2, minmax(0, 1fr))}
+}
+@media (max-width:520px){
+  .interest-grid-3x3{grid-template-columns:1fr}
+}
+
+.interest-tile{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+
+  padding:16px 16px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background:#fff;
+  box-shadow:0 12px 30px rgba(2,8,23,.04);
+
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.interest-tile:hover{
+  transform: translateY(-2px);
+  box-shadow:0 18px 45px rgba(2,8,23,.08);
+  border-color: rgba(37,99,235,.22);
+}
+
+.interest-icon{
+  width:40px;
+  height:40px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+
+  background: rgba(37,99,235,.08);
+  border: 1px solid rgba(37,99,235,.18);
+  font-size:18px;
+  flex:0 0 auto;
+}
+
+.interest-text h3{
+  margin:0 0 6px 0;
+  font-size:16px;
+}
+
+.interest-text p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.45;
+  font-size:14px;
+}
+
+.interest-cta{
+  margin-top:18px;
+  display:flex;
+  justify-content:flex-start;
+}
