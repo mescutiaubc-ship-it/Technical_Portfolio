@@ -1063,10 +1063,13 @@ body.subpage .topbar{position:static;top:auto}
 
   /* RIGHT SIDE */
   .topbar .navlinks{
-    width: 100%;
+    width: 86%;
+    margin: 0 auto;
+
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: auto auto auto;
+
     gap: 12px 10px;
     justify-items: center;
     align-items: center;
@@ -1074,17 +1077,17 @@ body.subpage .topbar{position:static;top:auto}
   }
 
   .topbar .navlinks a{
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 78px;
-    padding: 8px 10px;
+    min-width: 80px;
+    padding: 8px 14px;
     border-radius: 999px;
-    white-space: nowrap;
-    text-align: center;
-    border: 1px solid rgba(37,99,235,0.10);
+    border:1px solid rgba(37,99,235,0.15);
+
+    border: 1px solid rgba(37,99,235,0.15);
     background: rgba(255,255,255,0.82);
-    box-shadow: 0 4px 10px rgba(2,8,23,0.04);
+    box-shadow: 0 3px 6px rgba(2,8,23,0.04), inset 0 1px 0 rbga(255,255,255,0.6)
     transition:
       transform .18s ease,
       box-shadow .18s ease,
@@ -1097,7 +1100,7 @@ body.subpage .topbar{position:static;top:auto}
   .topbar .navlinks a:nth-child(2){ grid-column: 2; grid-row: 1; } /* About */
   .topbar .navlinks a:nth-child(3){ grid-column: 3; grid-row: 1; } /* Projects */
 
-  .topbar .navlinks a:nth-child(4){ grid-column: 1; grid-row: 2; } /* Leadership */
+  .topbar .navlinks a:nth-child(4){ grid-column: 1 / span 2; grid-row: 2; } /* Leadership */
   .topbar .navlinks a:nth-child(5){ grid-column: 3; grid-row: 2; } /* Interests */
 
   .topbar .navlinks a:nth-child(6){ grid-column: 2; grid-row: 3; } /* Contact */
@@ -1111,16 +1114,20 @@ body.subpage .topbar{position:static;top:auto}
   }
 
   /* Hover / tap feel */
-  .topbar .navlinks a:hover{
-    transform: translateY(-1px);
-    box-shadow: 0 10px 18px rgba(37,99,235,0.10);
-    border-color: rgba(37,99,235,0.20);
-    background: rgba(255,255,255,0.96);
+    .topbar .navlinks a:hover{
+    transform:translateY(-1px);
+
+    box-shadow:
+      0 8px 14px rgba(37,99,235,0.12);
+
+    border-color:rgba(37,99,235,0.28);
   }
 
-  .topbar .navlinks .cta:hover{
-    background: rgba(37,99,235,0.11);
-    box-shadow: 0 12px 22px rgba(37,99,235,0.14);
+  .topbar .navlinks a:active{
+    transform:translateY(1px);
+
+    box-shadow:
+      0 2px 4px rgba(0,0,0,0.15) inset;
   }
 
   /* Keep underline effect subtle and centered */
