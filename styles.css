@@ -920,218 +920,116 @@ body.subpage .topbar{position:static;top:auto}
 
 
 
-/* =========================
-   Mobile nav redesign only
-   Desktop remains unchanged
-   ========================= */
-@media (max-width: 768px){
-  .container.nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 16px;
-    padding: 14px 16px;
-  }
-
-  /* LEFT SIDE: logo + name stack */
-  .topbar .brand{
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
-  }
-
-  .topbar .avatar{
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    flex-shrink: 0;
-  }
-
-  .topbar .title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-    text-align: center;
-  }
-
-  .topbar .title strong{
-    display: block;
-    font-size: 15px;
-    line-height: 1.2;
-    margin: 0;
-  }
-
-  .topbar .title span{
-    display: block;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    line-height: 1.35;
-    margin-top: 2px;
-  }
-
-  /* RIGHT SIDE: nav links in 2 rows */
-  .topbar .navlinks{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px 10px;
-    justify-items: center;
-    align-items: center;
-    font-size: 12px;
-  }
-
-  .topbar .navlinks a{
-    padding: 4px 2px;
-    white-space: nowrap;
-    text-align: center;
-  }
-
-  /* place items explicitly */
-  .topbar .navlinks a:nth-child(1){ grid-column: 1; grid-row: 1; } /* Home */
-  .topbar .navlinks a:nth-child(2){ grid-column: 2; grid-row: 1; } /* About */
-  .topbar .navlinks a:nth-child(3){ grid-column: 3; grid-row: 1; } /* Projects */
-  .topbar .navlinks a:nth-child(4){ grid-column: 4; grid-row: 1; } /* Leadership */
-  .topbar .navlinks a:nth-child(5){ grid-column: 2; grid-row: 2; } /* Interests */
-  .topbar .navlinks a:nth-child(6){ grid-column: 3; grid-row: 2; } /* Contact */
-
-  .topbar .navlinks .cta{
-    padding: 8px 10px;
-    border-radius: 999px;
-  }
-}
 
 /* =========================
    Mobile nav redesign only
    Desktop remains unchanged
    ========================= */
+
+/*===============
+iPhone Layout
+=================*/
 @media (max-width: 768px){
   .container.nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 18px;
-    padding: 14px 16px;
+    padding: 16px 18px;
   }
 
-  /* LEFT SIDE */
+  /* top identity block */
   .topbar .brand{
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 18px;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
+    text-align: left;
   }
 
   .topbar .avatar{
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
   }
 
   .topbar .title{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     min-width: 0;
-    text-align: center;
   }
 
   .topbar .title strong{
-    display: block;
     font-size: 15px;
-    line-height: 1.2;
+    line-height: 1.15;
     margin: 0;
   }
 
   .topbar .title span{
-    display: block;
     font-size: 11px;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.10em;
     line-height: 1.35;
-    margin-top: 2px;
+    margin-top: 4px;
   }
 
-  /* RIGHT SIDE */
+  /* nav block below */
   .topbar .navlinks{
     width: 86%;
     margin: 0 auto;
-
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: auto auto auto;
-
-    gap: 12px 10px;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 12px 12px;
     justify-items: center;
     align-items: center;
-    font-size: 13px;
   }
 
   .topbar .navlinks a{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 80px;
+    min-width: 84px;
     padding: 8px 14px;
     border-radius: 999px;
-    border:1px solid rgba(37,99,235,0.15);
+    white-space: nowrap;
+    text-align: center;
 
-    border: 1px solid rgba(37,99,235,0.15);
-    background: rgba(255,255,255,0.82);
-    box-shadow: 0 3px 6px rgba(2,8,23,0.04), inset 0 1px 0 rbga(255,255,255,0.6)
-    transition:
-      transform .18s ease,
-      box-shadow .18s ease,
-      border-color .18s ease,
-      background .18s ease;
+    border: 1px solid rgba(37,99,235,0.14);
+    background: rgba(255,255,255,0.90);
+    box-shadow:
+      0 3px 8px rgba(2,8,23,0.05),
+      inset 0 1px 0 rgba(255,255,255,0.70);
+
+    transition: all .18s ease;
   }
 
-  /* Placement */
-  .topbar .navlinks a:nth-child(1){ grid-column: 1; grid-row: 1; } /* Home */
-  .topbar .navlinks a:nth-child(2){ grid-column: 2; grid-row: 1; } /* About */
-  .topbar .navlinks a:nth-child(3){ grid-column: 3; grid-row: 1; } /* Projects */
+  .topbar .navlinks a:nth-child(1){ grid-column: 1; grid-row: 1; }
+  .topbar .navlinks a:nth-child(2){ grid-column: 2; grid-row: 1; }
+  .topbar .navlinks a:nth-child(3){ grid-column: 3; grid-row: 1; }
 
-  .topbar .navlinks a:nth-child(4){ grid-column: 1 / span 2; grid-row: 2; } /* Leadership */
-  .topbar .navlinks a:nth-child(5){ grid-column: 3; grid-row: 2; } /* Interests */
+  .topbar .navlinks a:nth-child(4){ grid-column: 1; grid-row: 2; }
+  .topbar .navlinks a:nth-child(5){ grid-column: 3; grid-row: 2; }
 
-  .topbar .navlinks a:nth-child(6){ grid-column: 2; grid-row: 3; } /* Contact */
+  .topbar .navlinks a:nth-child(6){ grid-column: 2; grid-row: 2; }
 
-  /* Slightly stronger emphasis for Contact */
   .topbar .navlinks .cta{
-    padding: 9px 14px;
     border: 1px solid rgba(37,99,235,0.22);
     background: rgba(37,99,235,0.07);
     box-shadow: 0 6px 14px rgba(37,99,235,0.08);
   }
 
-  /* Hover / tap feel */
-    .topbar .navlinks a:hover{
-    transform:translateY(-1px);
-
-    box-shadow:
-      0 8px 14px rgba(37,99,235,0.12);
-
-    border-color:rgba(37,99,235,0.28);
+  .topbar .navlinks a:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(37,99,235,0.10);
+    border-color: rgba(37,99,235,0.24);
   }
 
   .topbar .navlinks a:active{
-    transform:translateY(1px);
-
-    box-shadow:
-      0 2px 4px rgba(0,0,0,0.15) inset;
-  }
-
-  /* Keep underline effect subtle and centered */
-  .topbar .navlinks a::after{
-    bottom: 4px;
+    transform: translateY(1px);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.12);
   }
 }
