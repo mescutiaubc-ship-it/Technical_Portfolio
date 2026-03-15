@@ -342,9 +342,10 @@
                 <path d="M4 6l8 6 8-6" stroke="currentColor" stroke-width="2"/>
               </svg>
             </span>
-            <span>EMAIL ME</span>
+            <span>LET'S CONNECT</span>
           </a>
 
+       
           <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:49ca9556-45f9-4bc8-ad3c-e294dee7d7ba"
             class="contact-btn" target="_blank" rel="noopener">
             <span class="icon" aria-hidden="true">
@@ -417,5 +418,47 @@
       });
     });
   </script>
+  
+
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const payload = {
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message")
+        };
+
+        formStatus.textContent = "Sending...";
+
+        try {
+          const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          const data = await res.json();
+
+          if (data.ok) {
+            formStatus.textContent = "Message sent successfully.";
+            contactForm.reset();
+          } else {
+            formStatus.textContent = data.error || "Something went wrong.";
+          }
+        } catch (err) {
+          formStatus.textContent = "Network error. Please try again.";
+        }
+      });
+    }
+  </script>
+
+
 </body>
 </html>
